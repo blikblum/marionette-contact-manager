@@ -1,0 +1,41 @@
+{
+  "name": "marionette-contact-manager",
+  "version": "1.0.0",
+  "description": "An Marionette contact manager example",
+  "main": "index.js",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "backbone.marionette": "^3.1.0",
+    "backbone.radio": "^2.0.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "marionette.routing": "0.0.1",
+    "rivets": "^0.8.1",
+    "rivets-backbone-adapter": "^2.2.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.7",
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "webpack": "^1.13.3",
+    "html-loader": "^0.4.4"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blikblum/marionette-contact-manager.git"
+  },
+  "keywords": [
+    "marionette"
+  ],
+  "author": "Luiz Americo Pereira Camara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blikblum/marionette-contact-manager/issues"
+  },
+  "homepage": "https://github.com/blikblum/marionette-contact-manager#readme"
+}
