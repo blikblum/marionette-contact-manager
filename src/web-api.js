@@ -44,7 +44,6 @@ let contacts = [
 ];
 
 export class WebAPI {
-  isRequesting = false;
   
   getContactList(){
     this.isRequesting = true;
@@ -94,3 +93,5 @@ export class WebAPI {
     });
   }
 }
+
+WebAPI.prototype.isRequesting = false;
