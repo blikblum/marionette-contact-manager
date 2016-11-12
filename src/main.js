@@ -1,6 +1,7 @@
 import { createRouter, middleware} from 'marionette.routing';
 import ApplicationRoute from './application/route';
 import ContactsRoute from './contacts/route';
+import Mn from 'backbone.marionette';
 
 let router = createRouter({log: true, logError: true});
 
@@ -11,6 +12,8 @@ router.map(function (route) {
     })
   })
 });
+
+router.rootRegion = new Mn.Region({el: '#app'});
 
 router.use(middleware);
 
