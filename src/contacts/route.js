@@ -10,10 +10,18 @@ export default Route.extend({
       this.contacts = new Contacts(contactsData)
     })
   },
+
   viewClass: ContactsView,
+
   viewOptions() {
     return {
       contacts: this.contacts
+    }
+  },
+
+  contextRequests: {
+    contacts: function () {
+      return this.contacts
     }
   }
 })
