@@ -9,7 +9,7 @@
     "backbone.radio": "^2.0.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1",
-    "marionette.routing": "0.0.1",
+    "marionette.routing": "^0.1.0",
     "rivets": "^0.8.1",
     "rivets-backbone-adapter": "^2.2.0",
     "underscore": "^1.8.3"
