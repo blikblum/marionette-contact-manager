@@ -1,5 +1,6 @@
 import Mn from 'backbone.marionette';
 import DataBinding from '../databinding';
+import Radio from 'backbone.radio';
 
 const itemHtml = `          
         <a href="#">
@@ -11,7 +12,14 @@ const ContactItemView = Mn.View.extend({
   behaviors: [DataBinding],
   tagName: 'li',
   className: 'list-group-item',
-  html: itemHtml
+  html: itemHtml,
+  events: {
+    'click': 'onClick'
+  },
+  onClick(e) {
+    e.preventDefault();
+    Radio.channel('router').request('transitionTo', 'contactdetail', {contactid: this.model.get('id')})
+  }
 });
 
 const ContactListView = Mn.CollectionView.extend({
