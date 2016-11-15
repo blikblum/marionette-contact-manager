@@ -38,6 +38,18 @@ export default Mn.View.extend({
   initialize(options) {
     this.contacts = options.contacts
   },
+  setSelected(contactId) {
+    let listView = this.getRegion('contactlist').currentView
+    listView.$('.list-group-item').removeClass('active')
+    if (contactId) {
+      let itemView = listView.children.find(function (view) {
+        return view.model.get('id') == contactId
+      })
+      if (itemView) {
+        itemView.$el.addClass('active')
+      }
+    }
+  },
   onRender() {
     this.showChildView('contactlist', new ContactListView({collection: this.contacts}))
   }
