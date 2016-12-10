@@ -9,17 +9,17 @@
     "backbone.radio": "^2.0.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1",
-    "marionette.routing": "^0.2.1",
+    "marionette.routing": "^0.3.0",
     "rivets": "^0.8.1",
     "rivets-backbone-adapter": "^2.2.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "babel-loader": "^6.2.7",
     "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
     "babel-preset-es2015": "^6.18.0",
-    "webpack": "^1.13.3",
-    "html-loader": "^0.4.4"
+    "html-loader": "^0.4.4",
+    "webpack": "^1.13.3"
   },
   "scripts": {
     "build": "webpack",
