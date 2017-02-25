@@ -1,3 +1,4 @@
+import './setup';
 import { createRouter, middleware} from 'marionette.routing';
 import ApplicationRoute from './application/route';
 import ContactsRoute from './contacts/route';
@@ -18,7 +19,11 @@ router.map(function (route) {
   })
 });
 
-router.rootRegion = new Mn.Region({el: '#app'});
+let app = new Mn.Application({
+  region: '#app'
+});
+
+router.rootRegion = app.getRegion();
 
 router.use(middleware);
 
