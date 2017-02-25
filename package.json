@@ -5,20 +5,20 @@
   "main": "index.js",
   "dependencies": {
     "backbone": "^1.3.3",
-    "backbone.marionette": "^3.1.0",
+    "backbone.marionette": "^3.2.0",
     "backbone.radio": "^2.0.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1",
-    "marionette.routing": "^0.3.0",
+    "marionette.routing": "^0.6.0",
     "rivets": "^0.8.1",
     "rivets-backbone-adapter": "^2.2.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
-    "babel-preset-es2015": "^6.18.0",
-    "html-loader": "^0.4.4",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "html-loader": "^0.4.5",
     "webpack": "^1.13.3"
   },
   "scripts": {
