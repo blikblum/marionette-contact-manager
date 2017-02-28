@@ -6,6 +6,8 @@ It is loosely based on an [Aurelia tutorial](http://jsroad.blogspot.com.br/2016/
 
 It requires a browser with native Promise implemantation
 
+Check the [live demo](https://blikblum.github.io/marionette-contact-manager/build/)
+
 ## Installation
 
 ```
