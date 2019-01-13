@@ -1,10 +1,7 @@
-import Mn from 'backbone.marionette';
-import DataBinding from '../databinding';
+import { View } from 'backbone.marionette';
 
-export default Mn.View.extend({
-  html: require('./template.html'),
-
-  behaviors: [DataBinding],
+export default View.extend({
+  template: require('./template.html'),  
 
   triggers: {
     'click #save-contact': 'save:model'

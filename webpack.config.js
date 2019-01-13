@@ -15,11 +15,17 @@ module.exports = {
     }
   },
   module: {
-    loaders: [
-      {test: /\.html$/, loader: 'html'},
-      {
-        test: /\.js$/, loader: 'babel?presets[]=es2015', include: [path.resolve(__dirname, 'src')]
-      }
+    rules: [{
+      test: /\.js$/,
+      include: [path.resolve('src')],
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          presets: [['es2015', {modules: false}]]
+        }
+      }]
+    },
+    {test: /\.html$/, loader: 'html-loader'}
     ]
   },
   plugins: [
@@ -29,8 +35,8 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([
-      {from: 'assets/*'},
-      {from: 'src/styles.css'}
+      { from: 'assets/*' },
+      { from: 'src/styles.css' }
     ])
   ]
 };

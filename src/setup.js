@@ -1,5 +1,10 @@
 import Backbone from 'backbone';
-import Marionette from 'backbone.marionette';
+import * as Marionette from 'backbone.marionette';
+import 'rivets';
+import 'rivets-backbone-adapter';
+import renderer from 'marionette.renderers/rivets';
+
+Marionette.View.setRenderer(renderer);
 
 // Marionette Inspector
 if (window.__agent) {

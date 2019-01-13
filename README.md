@@ -1,8 +1,8 @@
 # marionette-contact-manager
 
-This is the repository for the app built in this [tutorial](http://jsroad.blogspot.com.br/2016/11/tutorial-contact-manager-application.html)
+A contact manager example built with Marionette, based on an [Aurelia tutorial](http://jsroad.blogspot.com.br/2016/11/tutorial-contact-manager-application.html)
 
-It is loosely based on an [Aurelia tutorial](http://jsroad.blogspot.com.br/2016/11/tutorial-contact-manager-application.html)
+The tutorial branch in this repository has the app built in this [tutorial](http://jsroad.blogspot.com.br/2016/11/tutorial-contact-manager-application.html), while the master has a modernized version
 
 It requires a browser with native Promise implemantation
 

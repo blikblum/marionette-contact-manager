@@ -1,5 +1,4 @@
-import Mn from 'backbone.marionette';
-import DataBinding from '../databinding';
+import { View, CollectionView } from 'backbone.marionette';
 import {RouterLink} from 'marionette.routing';
 
 const itemHtml = `          
@@ -8,27 +7,25 @@ const itemHtml = `
           <p class="list-group-item-text">{model:email}</p>
         </a>`;
 
-const ContactItemView = Mn.View.extend({
-  behaviors: [DataBinding],
+const ContactItemView = View.extend({  
   tagName: 'li',
   className: 'list-group-item',
   attributes: {
     route: 'contactdetail',
     'rv-param-contactid': 'model:id'
   },
-  html: itemHtml
+  template: itemHtml
 });
 
-const ContactListView = Mn.CollectionView.extend({
+const ContactListView = CollectionView.extend({
   tagName: 'ul',
   className: 'list-group',
   childView: ContactItemView,
   behaviors: [RouterLink]
 });
 
-export default Mn.View.extend({
-  html: require('./template.html'),
-  behaviors: [DataBinding],
+export default View.extend({
+  template: require('./template.html'),  
   regions: {
     contactlist: '.contact-list',
     outlet: '.contact-outlet'

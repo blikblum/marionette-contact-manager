@@ -1,13 +1,18 @@
 import './setup';
-import { createRouter, middleware} from 'marionette.routing';
+import { Router } from 'marionette.routing';
 import ApplicationRoute from './application/route';
 import ContactsRoute from './contacts/route';
 import ContactDetailRoute from './contactdetail/route';
 import ContactNoSelectionView from './noselection/view';
-import Mn from 'backbone.marionette';
+import { Application } from 'backbone.marionette';
 import Radio from 'backbone.radio';
 
-let router = createRouter({log: true, logError: true});
+
+const app = new Application({
+  region: '#app'
+});
+
+const router = new Router({log: true, logError: true}, app.getRegion());
 
 router.map(function (route) {
   route('application', {path: '/', routeClass: ApplicationRoute}, function () {
@@ -18,14 +23,6 @@ router.map(function (route) {
     })
   })
 });
-
-let app = new Mn.Application({
-  region: '#app'
-});
-
-router.rootRegion = app.getRegion();
-
-router.use(middleware);
 
 Radio.channel('router').on('before:transition', function (transition) {
   if (transition.path === '/') {
